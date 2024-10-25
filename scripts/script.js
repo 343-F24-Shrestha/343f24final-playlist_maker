@@ -1,0 +1,3 @@
+/*
+    This is the baseline javascript file for now.
+*/
