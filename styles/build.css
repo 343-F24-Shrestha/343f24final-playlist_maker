@@ -1,0 +1,33 @@
+#build-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#build-wrapper #build-container {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+#build-wrapper #temp {
+    display: flex;
+    width: 100vw;
+}
+
+#build-wrapper #info-container {
+    border: 2px solid black;
+    padding: 25px;
+    width: 100vw;
+}
+
+#build-wrapper #song-container {
+    border: 2px solid black;
+    padding: 25px;
+    width: 99%;
+}
+
+#build-wrapper #build-container input {
+    margin-top: 15px;
+}

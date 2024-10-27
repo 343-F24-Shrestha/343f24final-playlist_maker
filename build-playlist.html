@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify Playlist App</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/build.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+
+    <nav>
+        <ul class="nav-list">
+            <li><a href="index.html"><strong>Playlists</strong></a></li>
+            <li><a href="#"><strong>Songs</strong></a></li>
+            <li class="search-bar">
+                <a href="search.html">search</a>
+            </li>
+            <li class="profile"><a href="#"><strong>Profile</strong></a></li>
+        </ul>
+    </nav>
+    <div id="build-wrapper">
+        <div id="info-container">
+            <input type="file" id="img" name="img" accept="image/*">
+            <input type="text" placeholder="Title">
+            <input type="text" placeholder="Description">
+        </div>
+        <div id="temp">
+            <div id="build-container">
+                <input type="text" placeholder="Genre">
+                <input type="text" placeholder="Year">
+                <input type="text" placeholder="Popularity">
+                <button type="submit">Submit</button>
+            </div>
+            <div id="song-container">
+                <ul>
+                    <li>song 1</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
