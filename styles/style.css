@@ -1,14 +1,16 @@
 /*
     This is the baseline styling css file for now.
 */
+
+@import url('ttps://fonts.googleapis.com/css2?family=Archivo+Black&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=League+Spartan:wght@100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet');
 body {
     background-color: #FFFFFF;
-    font-family:  sans-serif;
+    font-family: "League Spartan", serif;
     color: #000000;
     margin: 0;
     padding: 0;
 }
-
 
 nav {
     background-color: #7B806A;
@@ -35,7 +37,7 @@ nav {
 .nav-list a {
     text-decoration: none;
     color: #000000;
-    font-family: sans-serif;
+    font-family: "Archivo Black", serif;
     font-size: 25px;
 }
 
@@ -92,13 +94,13 @@ main {
     margin-top: 20px;
 }
 
-.songs-sec{
+.songs-sec {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.songs-div{
+.songs-div {
     background-color: #89AFA2;
     padding: 20px;
     border-radius: 10px;
@@ -107,13 +109,13 @@ main {
     width: 25vw;
 }
 
-.playlist-view{
+.playlist-view {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.playlist-v{
+.playlist-v {
     background-color: #89AFA2;
     padding: 20px;
     border-radius: 10px;
