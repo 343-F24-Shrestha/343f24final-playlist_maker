@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Spotify Playlist App</title>
+    <title>View Playlists</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/search.css">
+    <link rel="stylesheet" href="styles/playlist.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -17,25 +17,24 @@
             <li><a href="index.html"><strong>Playlists</strong></a></li>
             <li><a href="#"><strong>Songs</strong></a></li>
             <li class="search-bar">
-                <a href="search.html">search</a>
+                <a href="browse.html">Browse</a>
             </li>
             <li class="profile"><a href="#"><strong>Profile</strong></a></li>
         </ul>
     </nav>
-    <div id="premade-wrapper">
-        <div class="premade-playlist">
-            <img alt="cat" src="Thinking-of-getting-a-cat.png">
-            <p>playlist 1</p>
-            <button type="button">expand</button>
+    <div id="playlist-wrapper">
+        <div id="playlist-control">
+            <p><a href="build-playlist.html">New Playlist</a></p>
+            <p class="delete-button">Delete Playlist</p>
         </div>
-        <div class="premade-playlist">
-            <p>playlist 2</p>
-        </div>
-        <div class="premade-playlist">
-            <p>playlist 3</p>
-        </div>
-        <div class="premade-playlist">
-            <p>playlist 4</p>
+        <div id="playlist-container">
+            <ul>
+                <li>placeholder</li>
+                <li>placeholder</li>
+                <li>placeholder</li>
+                <li>placeholder</li>
+                <li>placeholder</li>
+            </ul>
         </div>
     </div>
     <script src="scripts/script.js"></script>

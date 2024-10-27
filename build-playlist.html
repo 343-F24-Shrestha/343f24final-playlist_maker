@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Spotify Playlist App</title>
+    <title>Build A New Playlist</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/build.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
             <li><a href="index.html"><strong>Playlists</strong></a></li>
             <li><a href="#"><strong>Songs</strong></a></li>
             <li class="search-bar">
-                <a href="search.html">search</a>
+                <a href="browse.html">Browse</a>
             </li>
             <li class="profile"><a href="#"><strong>Profile</strong></a></li>
         </ul>
@@ -30,14 +30,15 @@
         </div>
         <div id="temp">
             <div id="build-container">
-                <input type="text" placeholder="Genre">
-                <input type="text" placeholder="Year">
-                <input type="text" placeholder="Popularity">
-                <button type="submit">Submit</button>
+                <form class="build-form">
+                    <input type="text" placeholder="Genre">
+                    <input type="text" placeholder="Year">
+                    <input type="text" placeholder="Popularity">
+                    <button type="submit">Submit</button>
+                </form>
             </div>
             <div id="song-container">
                 <ul>
-                    <li>song 1</li>
                 </ul>
             </div>
         </div>
