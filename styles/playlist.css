@@ -27,5 +27,6 @@
 
 #playlist-wrapper #playlist-container {
     border: 2px solid black;
+    height: 65vh;
 }
 
