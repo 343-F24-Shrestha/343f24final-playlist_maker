@@ -3,14 +3,14 @@
 */
 
 let items = document.getElementsByClassName("premade-playlist");
-let button = document.querySelector("button");
+let buttons = document.querySelectorAll("button[class='expand'");
 
-button.addEventListener("click", (event) => {
-    for (let i = 0; i < items.length; i++) {
-        if (items[i].style.height == "150px") {
-            items[i].style.height = "350px";
+buttons.forEach( (button) => {
+    button.addEventListener("click", (event) => {
+        if (button.parentElement.style.height == "150px") {
+            button.parentElement.style.height = "350px";
         } else {
-            items[i].style.height = "150px";
+            button.parentElement.style.height = "150px";
         }
-    }
+    });
 });
