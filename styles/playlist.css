@@ -8,6 +8,7 @@
     padding: 20px;
     max-width: 900px;
     border-radius: 8px;
+    font-size: 19px;
 }
 
 #playlist-control {
@@ -20,7 +21,7 @@
 #playlist-control * {
     border-radius: 5px;
     background-color: #89AFA2;
-    color: white;
+    color: #000000;
     padding: 12px;
     text-decoration: none;
 }

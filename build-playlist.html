@@ -24,16 +24,24 @@
     </nav>
     <div id="build-wrapper">
         <div id="info-container">
-            <input type="file" id="img" name="img" accept="image/*">
-            <input type="text" placeholder="Title">
-            <input type="text" placeholder="Description">
+            <form class="build-form">
+                <label for="build-img">Upload Profile Picture:</label>
+                <input id="build-img" type="file" id="img" name="img" accept="image/*">
+                <label for="title-input">Insert Title:</label>
+                <input id="title-input" type="text" placeholder="Title">
+                <label for="descrip-input">Insert Description:</label>
+                <input id="descrip-input" type="text" placeholder="Description">
+            </form>
         </div>
         <div id="temp">
             <div id="build-container">
                 <form class="build-form">
-                    <input type="text" placeholder="Genre">
-                    <input type="text" placeholder="Year">
-                    <input type="text" placeholder="Popularity">
+                    <label for="genre-input">Insert Genres:</label>
+                    <input id="genre-input" type="text" placeholder="Genre">
+                    <label for="year-input">Insert Year:</label>
+                    <input id="year-input" type="text" placeholder="Year">
+                    <label for="popularity-input">Insert Popularity:</label>
+                    <input id="popularity-input" type="text" placeholder="Popularity">
                     <button type="submit">Submit</button>
                 </form>
             </div>
