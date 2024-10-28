@@ -1,7 +1,7 @@
 /* Container */
 .container {
-    width: 1783px;
-    height: 431px;
+    width: 100vw;
+    height: 100vh;
     position: relative;
     background: linear-gradient(180deg, #565656 0%, #323232 100%);
 }
@@ -32,9 +32,15 @@
 
 /* Inner Circle of Profile Picture */
 .profile-pic-inner {
-    width: 111.33px;
-    height: 111.33px;
-    background: #FEF7FF;
+    width: 200px;
+    height: 200px;
+    right: 25px;
+    bottom: 20px;
+    background: #fef7ff00;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 /* Username */
@@ -75,4 +81,13 @@
 
 .playlists-info-italic {
     font-style: italic;
+}
+
+.search-bar-pro {
+    display: flex;
+    width: 45vw;
+}
+
+.back-button {
+    right: 30vw;
 }
