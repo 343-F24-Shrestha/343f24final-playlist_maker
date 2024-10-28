@@ -1,0 +1,78 @@
+/* Container */
+.container {
+    width: 1783px;
+    height: 431px;
+    position: relative;
+    background: linear-gradient(180deg, #565656 0%, #323232 100%);
+}
+
+/* Profile Picture Background */
+.profile-pic-bg {
+    width: 258px;
+    height: 270px;
+    left: 572px;
+    top: 81px;
+    position: absolute;
+    background: #2A2A2A;
+    border-radius: 50%;
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 167px;
+    height: 167px;
+    padding: 27.83px;
+    left: 617px;
+    top: 122px;
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Inner Circle of Profile Picture */
+.profile-pic-inner {
+    width: 111.33px;
+    height: 111.33px;
+    background: #FEF7FF;
+}
+
+/* Username */
+.username {
+    left: 865px;
+    top: 167px;
+    position: absolute;
+    color: white;
+    font-size: 64px;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+/* Profile Text */
+.profile-text {
+    left: 865px;
+    top: 113px;
+    position: absolute;
+    color: white;
+    font-size: 32px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+/* Playlists Information */
+.playlists-info {
+    left: 865px;
+    top: 274px;
+    position: absolute;
+    color: #6A6A6A;
+    font-size: 24px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.playlists-info-italic {
+    font-style: italic;
+}
