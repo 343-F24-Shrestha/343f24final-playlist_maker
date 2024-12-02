@@ -17,10 +17,6 @@
     width: 20vw;
 }
 
-#build-wrapper #build-container .build-form {
-    width: 20vw;
-}
-
 #build-wrapper #temp {
     display: flex;
     width: 95vw;
@@ -44,8 +40,22 @@
     padding: 25px;
     flex-grow: 1;
     background: #ffffff;
-    height: 50vh;
+    max-height: 80vh; 
+    overflow-y: auto;
 }
+
+#build-wrapper #song-container p:nth-child(even) {
+    background-color: #89AFA2;
+    color: white;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+#build-wrapper #song-container p:nth-child(odd) {
+    background-color: white;
+    padding: 25px;
+}
+
 
 #build-wrapper #build-container input,
 #build-wrapper #info-container input {
@@ -67,3 +77,39 @@
     border-radius: 4px;
     border: 1px solid #ddd;
 }
+
+.radio-section {
+    margin-bottom: 10px;
+}
+
+.radio-section .radio-options {
+    display: none;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.radio-section .radio-toggle {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.radio-section .radio-options div {
+    margin-bottom: 5px;
+}
+
+.radio-section input {
+    margin-right: 5px;
+    width: auto;
+    height: 16px;
+    width: 16px;
+}
+
+.radio-section label {
+    font-size: 14px;
+}
+
+.radio-section.open .radio-options {
+    display: block;
+}
+

@@ -1,7 +1,7 @@
 #playlist-wrapper {
     display: flex;
     flex-direction: column;
-    background-color: #948e99;
+    background-color: #fff;
     border: 2px solid #ddd;
     margin: 20px auto;
     width: 90%;
@@ -20,19 +20,20 @@
 
 #playlist-control * {
     border-radius: 5px;
-    background-color: white;
-    color: black;
+    background-color: #948e99;
+    color: #000000;
     padding: 12px;
     text-decoration: none;
 }
 
 #playlist-wrapper #playlist-container {
-    border: 2px solid black;
-    height: 65vh;
-    background-color: white;
-
+    border: 2px solid #ddd;
+    width: 40vw;
+    border-radius: 8px;
+    padding: 25px;
+    flex-grow: 1;
+    background: #ffffff;
+    max-height: 80vh; 
+    overflow-y: auto;
 }
 
-body{
-    background-color: #2e1437;
-}

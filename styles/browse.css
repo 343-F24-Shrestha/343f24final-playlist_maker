@@ -9,10 +9,6 @@
     max-width: 1200px;
 }
 
-body{
-    background-color: #2e1437;
-}
-
 #premade-wrapper .premade-playlist {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 12px;
@@ -23,7 +19,7 @@ body{
     transition: height 0.5s ease;
     border-radius: 12px;
     background-color: #948e99;
-    color:white;
+    color: #2F3E3B;
     display: flex;
     flex-direction: column;
     align-items: center;
