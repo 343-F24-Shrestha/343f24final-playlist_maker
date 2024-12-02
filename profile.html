@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Profile</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/profile_stylesheet.css">
+    <link rel="stylesheet" href="styles/profile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -13,9 +13,12 @@
 <body>
     <nav>
         <ul class="nav-list">
-            <li class="search-bar-pro">
-                <a class="back-button" href="index.html">Back</a>
+            <li><a href="index.html"><strong>Home</strong></a></li>
+            <li><a href="playlists.html"><strong>Playlists</strong></a></li>
+            <li class="search-bar">
+                <a href="browse.html">Browse</a>
             </li>
+            <li class="profile"><a href="#"><strong>Profile</strong></a></li>
         </ul>
     </nav>
     <div class="container">
@@ -25,11 +28,24 @@
                 <img src="assets/person.png" alt="Loading">
             </div>
         </div>
-        <div class="username">GunnerL</div>
+        <!-- FINISH THIS TO GET USERNAME AND PLAYLIST AMOUNT -->
+        <div class="username">Username</div>
         <div class="profile-text">Profile</div>
         <div class="playlists-info">
             <span>You have </span><span class="playlists-info-italic">n</span><span> number of playlists</span>
         </div>
     </div>
+
+    <div id="playlist-container">
+        <ul>
+            <!--JS will retrieve a user's currently saved list of playlists-->
+            <li>placeholder</li>
+            <li>placeholder</li>
+            <li>placeholder</li>
+            <li>placeholder</li>
+            <li>placeholder</li>
+        </ul>
+    </div>
+    <script src="scripts/scripst.js"></script>
 </body>
 </html>

@@ -1,0 +1,62 @@
+/* Profile Picture Background */
+.profile-pic-bg {
+    width: 258px;
+    height: 270px;
+    left: 0;
+    top: 0;
+    position: left;
+    background: #2A2A2A;
+    border-radius: 50%;
+}
+/* Profile Picture */
+.profile-pic {
+    width: 167px;
+    height: 167px;
+    padding: 27.83px;
+    left: 20px;
+    top: 85px;
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Username */
+.username {
+    left: 18%;
+    top: 15%;
+    position: absolute;
+    color:#cad1c3;
+    font-size: 64px;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+/* Profile Text */
+.profile-text {
+    left: 18%;
+    top: 12%;
+    position: absolute;
+    color:#cad1c3;
+    font-size: 25px;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+/* Playlists Information */
+/* TODO GET NUM OF PLAYLISTS */
+.playlists-info {
+    left: 18%;
+    top: 25%;
+    position: absolute;
+    color:#cad1c3;
+    font-size: 24px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+.playlists-info-italic {
+    font-style: italic;
+}
+body{
+    background-color: #2e1437;
+}

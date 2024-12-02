@@ -9,26 +9,30 @@
     max-width: 1200px;
 }
 
+body{
+    background-color: #2e1437;
+}
+
 #premade-wrapper .premade-playlist {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 12px;
     padding: 15px;
     width: 100%;
-    max-width: 350px; 
-    height: 150px;  
+    max-width: 350px;
+    height: 150px;
     transition: height 0.5s ease;
-    border-radius: 12px; 
-    background-color: #89AFA2;
-    color: #2F3E3B;
+    border-radius: 12px;
+    background-color: #948e99;
+    color:white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
 }
 
 #premade-wrapper .premade-playlist img {
     width: 100%;
     height: auto;
-    object-fit: cover; 
-    border-radius: 10px; 
+    object-fit: cover;
+    border-radius: 10px;
 }

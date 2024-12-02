@@ -4,6 +4,13 @@
 
 @import url('ttps://fonts.googleapis.com/css2?family=Archivo+Black&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=League+Spartan:wght@100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet');
+
+main{
+    background-color: #2e1437;
+}
+html{
+    background-color: #2e1437;
+}
 body {
     background-color: #FFFFFF;
     font-family: "League Spartan", serif;
@@ -13,7 +20,7 @@ body {
 }
 
 nav {
-    background-color: #7B806A;
+    background-color: #948e99;
     height: 5vw;
     display: flex;
     align-items: center;
@@ -28,17 +35,20 @@ nav {
     margin: 0;
     width: 100%;
     justify-content: space-around;
+    color:#e7eed0;
 }
 
 .nav-list li {
     display: inline;
+    color:#e7eed0;
 }
 
 .nav-list a {
     text-decoration: none;
-    color: #000000;
+    color: #e7eed0;
     font-family: "Archivo Black", serif;
     font-size: 25px;
+    color:#51425f;
 }
 
 .search-bar {
@@ -57,7 +67,7 @@ nav {
 
 .profile a {
     text-decoration: none;
-    color: #000000;
+    color:#51425f;
     font-family: sans-serif;
     font-size: 25px;
 }
@@ -77,7 +87,7 @@ main {
 }
 
 .playlist-info {
-    background-color: #89AFA2;
+    background-color: #948e99;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -101,7 +111,7 @@ main {
 }
 
 .profile-div {
-    background-color: #89AFA2;
+    background-color: #948e99;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -116,7 +126,7 @@ main {
 }
 
 .playlist-v {
-    background-color: #89AFA2;
+    background-color: #948e99;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -126,5 +136,5 @@ main {
 }
 
 a  {
-    color: #000000;
+    color: #2e1437;
 }
