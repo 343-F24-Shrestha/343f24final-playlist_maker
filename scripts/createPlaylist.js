@@ -1,3 +1,4 @@
+// Event listener for when the DOM is loaded to handle the spotify authentication
 document.addEventListener('DOMContentLoaded', () => {
     const radioSections = document.querySelectorAll('.radio-section');
 
@@ -11,27 +12,29 @@ document.addEventListener('DOMContentLoaded', () => {
     handleSpotifyAuth();
 });
 
+// Gets the access token from the url 
 function getAccessTokenFromUrl() {
     const hash = window.location.hash;
     const params = new URLSearchParams(hash.substring(1));
     return params.get("access_token");
 }
 
+// Handles if a token is present, else it gives the work to authorize the credentials
 function handleSpotifyAuth() {
     const token = getAccessTokenFromUrl();
     if (token) {
-        console.log("token :", token);
         window.location.hash = ""; 
         localStorage.setItem("spotify_access_token", token);
     } else {
-        console.log("No token found, authorizing...");
         authorizeSpotify();
     }
 }
 
+// Authorizes access to Spotify APi with clientID and the redirect URI
 function authorizeSpotify() {
     const clientId = "61e27c75288442e492a4585b195b1750";
     const redirectUri = "https://343-f24-shrestha.github.io/343f24final-playlist_maker/build-playlist.html";
+    // Defines the scopes for access to the Spotify API
     const scopes = [
         "user-read-private",
         "user-read-email",
@@ -47,12 +50,14 @@ function authorizeSpotify() {
     window.location.href = authUrl;
 }
 
+// Searches for the tracks based on the user input parameters 
 async function searchTracks(year, genre, popularity) {
     const apiUrl = 'https://api.spotify.com/v1/search';
     const query = `year:${year} genre:${genre}`;
     const accessToken = localStorage.getItem("spotify_access_token");
 
     try {
+        // Fetch request to the API to get data from Spotify
         const response = await fetch(`${apiUrl}?q=${encodeURIComponent(query)}&type=track&limit=10`, {
             method: 'GET',
             headers: {
@@ -60,6 +65,8 @@ async function searchTracks(year, genre, popularity) {
             },
         });
         const data = await response.json();
+
+        // Creates a track object containing name, artist, album, and popularity
         if (data.tracks && data.tracks.items.length > 0) {
             const tracks = data.tracks.items.map(track => ({
                 name: track.name,
@@ -70,13 +77,12 @@ async function searchTracks(year, genre, popularity) {
             }));
             return tracks;
         } else {
-            console.log('no tracks');
         }
     } catch (error) {
-        console.error('failed track:', error);
     }
 }
 
+// Helper function to get the value that was selected for the radio inputs
 function getSelectedRadioValue(name) {
     const radios = document.getElementsByName(name);
     for (let radio of radios) {
@@ -89,23 +95,21 @@ function getSelectedRadioValue(name) {
 
 document.getElementById("new-submit").addEventListener("click", getTracks);
 
+// Helper function to get the tracks and appends the songs to the created playlist on the HTML page
 async function getTracks() {
     const year = getSelectedRadioValue("year");
     const genre = getSelectedRadioValue("genre");
     const popularity = getSelectedRadioValue("popularity");
-    const title = document.getElementById("title-input").value;
-
-    console.log(year + genre + popularity);
-
-    const container = document.getElementById("song-container");
+    const titleInput= document.getElementById("titleInput-input").value;
+    const songContainer = document.getElementById("song-container");
     let tracks = await searchTracks(year, genre, popularity);
-
     if (tracks) {
+        // Iterates through the added tracks and creates html elements to the song-container element
         for (let i = 0; i < tracks.length; i++) {
             let song = document.createElement("p");
-            song.textContent = "Artist: " + tracks[i].artist + " Title: " + tracks[i].name;
-            container.appendChild(song);
+            song.textContent = "Artist: " + tracks[i].artist + " titleInput: " + tracks[i].name;
+            songContainer.appendChild(song);
         }
-        localStorage.setItem(title, JSON.stringify(tracks));
+        localStorage.setItem(titleInput, JSON.stringify(tracks));
     }
 }
