@@ -32,8 +32,7 @@ async function handleSpotifyAuth() {
         localStorage.setItem("spotify_access_token", token); // sets the token
         localStorage.setItem("spotify_token_expiration", currentTime + 3600 * 1000); // Token valid for 1 hour bc currenttime is
         // in milliseconds and you add 3600 for seconds in an hour and multiply it by 1000 to get it in miliseconds
-    } else if (token || currentTime > tokenExpiration){ //missing token or time runs out
-
+    } else if (!token || currentTime >= tokenExpiration){ //missing token or time runs out
         authorizeSpotify();
     }
 }
@@ -65,9 +64,7 @@ async function searchTracks(year, genre, popularity) {
     const accessToken = localStorage.getItem("spotify_access_token");
 
     if (!accessToken) {
-        console.error("Access token is missing. Re-authorizing.");
         authorizeSpotify();
-        return null;
     }
 
     try {
@@ -80,9 +77,7 @@ async function searchTracks(year, genre, popularity) {
         });
 
         if (response.status === 401) {
-            console.error("Unauthorized: Token may be expired. Re-authorizing.");
             authorizeSpotify();
-            return null;
         }
         const data = await response.json();
 
