@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleSpotifyAuth();
 });
 
-// Gets the access token from the url 
+// Gets the access token from the url
 function getAccessTokenFromUrl() {
     const hash = window.location.hash;
     const params = new URLSearchParams(hash.substring(1));
@@ -20,12 +20,20 @@ function getAccessTokenFromUrl() {
 }
 
 // Handles if a token is present, else it gives the work to authorize the credentials
-function handleSpotifyAuth() {
+async function handleSpotifyAuth() {
     const token = getAccessTokenFromUrl();
+    const tokenExpiration = localStorage.getItem("spotify_token_expiration");
+    const currentTime = new Date().getTime();
+    const storedToken = localStorage.getItem("spotify_access_token");
+
     if (token) {
-        window.location.hash = ""; 
-        localStorage.setItem("spotify_access_token", token);
-    } else {
+        // Get ur token
+        window.location.hash = "";
+        localStorage.setItem("spotify_access_token", token); // sets the token
+        localStorage.setItem("spotify_token_expiration", currentTime + 3600 * 1000); // Token valid for 1 hour bc currenttime is
+        // in milliseconds and you add 3600 for seconds in an hour and multiply it by 1000 to get it in miliseconds
+    } else if (token || currentTime > tokenExpiration){ //missing token or time runs out
+
         authorizeSpotify();
     }
 }
@@ -50,11 +58,17 @@ function authorizeSpotify() {
     window.location.href = authUrl;
 }
 
-// Searches for the tracks based on the user input parameters 
+// Searches for the tracks based on the user input parameters
 async function searchTracks(year, genre, popularity) {
     const apiUrl = 'https://api.spotify.com/v1/search';
     const query = `year:${year} genre:${genre}`;
     const accessToken = localStorage.getItem("spotify_access_token");
+
+    if (!accessToken) {
+        console.error("Access token is missing. Re-authorizing.");
+        authorizeSpotify();
+        return null;
+    }
 
     try {
         // Fetch request to the API to get data from Spotify
@@ -64,6 +78,12 @@ async function searchTracks(year, genre, popularity) {
                 'Authorization': `Bearer ${accessToken}`,
             },
         });
+
+        if (response.status === 401) {
+            console.error("Unauthorized: Token may be expired. Re-authorizing.");
+            authorizeSpotify();
+            return null;
+        }
         const data = await response.json();
 
         // Creates a track object containing name, artist, album, and popularity
