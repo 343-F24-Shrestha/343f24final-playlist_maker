@@ -100,14 +100,14 @@ async function getTracks() {
     const year = getSelectedRadioValue("year");
     const genre = getSelectedRadioValue("genre");
     const popularity = getSelectedRadioValue("popularity");
-    const titleInput= document.getElementById("titleInput").value;
+    const titleInput= document.getElementById("title-input").value;
     const songContainer = document.getElementById("song-container");
     let tracks = await searchTracks(year, genre, popularity);
     if (tracks) {
         // Iterates through the added tracks and creates html elements to the song-container element
         for (let i = 0; i < tracks.length; i++) {
             let song = document.createElement("p");
-            song.textContent = "Artist: " + tracks[i].artist + " titleInput: " + tracks[i].name;
+            song.textContent = "Artist: " + tracks[i].artist + " Title: " + tracks[i].name;
             songContainer.appendChild(song);
         }
         localStorage.setItem(titleInput, JSON.stringify(tracks));
