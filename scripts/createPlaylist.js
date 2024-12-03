@@ -117,6 +117,7 @@ async function getTracks() {
     const popularity = getSelectedRadioValue("popularity");
     const titleInput= document.getElementById("title-input1").value;
     const songContainer = document.getElementById("song-container");
+    songContainer.innerHTML = "";
     let tracks = await searchTracks(year, genre, popularity);
     if (tracks) {
         // Iterates through the added tracks and creates html elements to the song-container element
