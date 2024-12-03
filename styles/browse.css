@@ -11,6 +11,7 @@
 
 #premade-wrapper .premade-playlist {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 25px;
     margin: 12px;
     padding: 15px;
     width: 100%;
@@ -19,8 +20,9 @@
     transition: height 0.5s ease;
     border-radius: 12px;
     background-color: #948e99;
-    color: #2F3E3B;
+    color: white;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -31,4 +33,9 @@
     height: auto;
     object-fit: cover;
     border-radius: 10px;
+}
+
+#premade-wrapper .genre-details {
+    background-color: #ff6f61;
+    border-radius: 25px;
 }

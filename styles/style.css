@@ -49,6 +49,12 @@ nav {
     font-family: "Archivo Black", serif;
     font-size: 25px;
     color:#51425f;
+    border: none;
+    transition: color 0.5s;
+}
+
+.nav-list a:hover {
+    color: white;
 }
 
 .search-bar {
