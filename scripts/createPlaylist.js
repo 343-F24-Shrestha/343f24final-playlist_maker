@@ -100,7 +100,7 @@ async function getTracks() {
     const year = getSelectedRadioValue("year");
     const genre = getSelectedRadioValue("genre");
     const popularity = getSelectedRadioValue("popularity");
-    const titleInput= document.getElementById("titleInput-input").value;
+    const titleInput= document.getElementById("titleInput").value;
     const songContainer = document.getElementById("song-container");
     let tracks = await searchTracks(year, genre, popularity);
     if (tracks) {

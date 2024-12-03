@@ -1,31 +1,26 @@
-/* Profile Picture Background */
-.profile-pic-bg {
-    width: 258px;
-    height: 270px;
-    left: 0;
-    top: 0;
-    position: left;
-    background: #2A2A2A;
-    border-radius: 50%;
-}
+
 /* Profile Picture */
 .profile-pic {
-    width: 167px;
-    height: 167px;
+    width: 200px;
+    height: 200px;
     padding: 27.83px;
-    left: 20px;
-    top: 85px;
+    left: 85px;
+    top: 90px;
     position: absolute;
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    background-color: #2A2A2A; /* Background color for the filled border */
+    padding: 10px; /* Padding to create space between the image and the border */
+    box-sizing: border-box; /* Ensures padding doesn't affect the overall size */
+    border-radius: 50%; /* Ensure the background is also round */
 }
 /* Username */
 .username {
-    left: 18%;
-    top: 15%;
+    left: 300px;
+    top: 150px;
     position: absolute;
-    color:#cad1c3;
+    color: white;
     font-size: 64px;
     font-family: Inter, sans-serif;
     font-weight: 700;
@@ -33,22 +28,22 @@
 }
 /* Profile Text */
 .profile-text {
-    left: 18%;
-    top: 12%;
+    left: 300px;
+    top: 100px;
     position: absolute;
-    color:#cad1c3;
-    font-size: 25px;
+    color: white;
+    font-size: 32px;
     font-family: Inter, sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     word-wrap: break-word;
 }
 /* Playlists Information */
 /* TODO GET NUM OF PLAYLISTS */
 .playlists-info {
-    left: 18%;
-    top: 25%;
+    left: 300px;
+    top: 250px;
     position: absolute;
-    color:#cad1c3;
+    color: #6A6A6A;
     font-size: 24px;
     font-family: Inter, sans-serif;
     font-weight: 400;
@@ -59,4 +54,35 @@
 }
 body{
     background-color: #2e1437;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start; /* Align content to the left */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left side */
+    padding-left: 20px; /* Optional padding */
+    padding-top: 20px; /* Optional padding */
+}
+
+.playlists-info-italic {
+    font-style: italic;
+}
+
+.search-bar-pro {
+    display: flex;
+    width: 100vw;
+}
+
+.back-button {
+    right: 30vw;
+}
+.left_allign {
+    display: flex;
+    align-items: flex-start;
 }
