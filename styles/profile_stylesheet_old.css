@@ -1,52 +1,47 @@
 /* Container */
-.container {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
+
+body {
     background: linear-gradient(180deg, #565656 0%, #323232 100%);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start; /* Align content to the left */
+  }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left side */
+    padding-left: 20px; /* Optional padding */
+    padding-top: 20px; /* Optional padding */
 }
 
-/* Profile Picture Background */
-.profile-pic-bg {
-    width: 258px;
-    height: 270px;
-    left: 572px;
-    top: 81px;
-    position: absolute;
-    background: #2A2A2A;
-    border-radius: 50%;
-}
+
 
 /* Profile Picture */
 .profile-pic {
-    width: 167px;
-    height: 167px;
+    width: 200px;
+    height: 200px;
     padding: 27.83px;
-    left: 617px;
-    top: 122px;
+    left: 85px;
+    top: 90px;
     position: absolute;
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    background-color: #2A2A2A; /* Background color for the filled border */
+    padding: 10px; /* Padding to create space between the image and the border */
+    box-sizing: border-box; /* Ensures padding doesn't affect the overall size */
+    border-radius: 50%; /* Ensure the background is also round */
 }
 
-/* Inner Circle of Profile Picture */
-.profile-pic-inner {
-    width: 200px;
-    height: 200px;
-    right: 25px;
-    bottom: 20px;
-    background: #fef7ff00;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: flex-start;
-}
 
 /* Username */
 .username {
-    left: 865px;
-    top: 167px;
+    left: 300px;
+    top: 150px;
     position: absolute;
     color: white;
     font-size: 64px;
@@ -57,8 +52,8 @@
 
 /* Profile Text */
 .profile-text {
-    left: 865px;
-    top: 113px;
+    left: 300px;
+    top: 100px;
     position: absolute;
     color: white;
     font-size: 32px;
@@ -69,8 +64,8 @@
 
 /* Playlists Information */
 .playlists-info {
-    left: 865px;
-    top: 274px;
+    left: 300px;
+    top: 250px;
     position: absolute;
     color: #6A6A6A;
     font-size: 24px;
@@ -85,9 +80,18 @@
 
 .search-bar-pro {
     display: flex;
-    width: 45vw;
+    width: 100vw;
 }
 
 .back-button {
     right: 30vw;
+}
+.left_allign {
+    display: flex;
+    align-items: flex-start;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
 }
