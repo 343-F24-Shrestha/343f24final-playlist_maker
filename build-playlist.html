@@ -15,7 +15,7 @@
         <nav>
             <ul class="nav-list">
                 <li><a href="index.html"><strong>Home</strong></a></li>
-                <li><a href="#"><strong>Playlists</strong></a></li>
+                <li><a href="playlists.html"><strong>Playlists</strong></a></li>
                 <li class="search-bar">
                     <a href="browse.html">Browse</a>
                 </li>
@@ -61,6 +61,16 @@
                                     name="genre" value="hip-hop">
                                 <label for="genre-hiphop">Hip Hop</label>
                             </div>
+                            <div>
+                                <input type="radio" id="genre-classical"
+                                    name="genre" value="classical">
+                                <label for="genre-classical">Classical</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="genre-edm"
+                                    name="genre" value="edm">
+                                <label for="genre-edm">EDM</label>
+                            </div>
                         </div>
                     </div>
                     <!-- A section for year input -->
@@ -68,6 +78,11 @@
                         <label class="radio-toggle" for="year">Year: (Click
                             Here)</label>
                         <div class="radio-options" id="year-options">
+                            <div>
+                                <input type="radio" id="year-2019"
+                                    name="year" value="2019">
+                                <label for="year-2019">2019</label>
+                            </div>
                             <div>
                                 <input type="radio" id="year-2020"
                                     name="year" value="2020">
@@ -87,6 +102,11 @@
                                 <input type="radio" id="year-2023"
                                     name="year" value="2023">
                                 <label for="year-2023">2023</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="year-2024"
+                                    name="year" value="2024">
+                                <label for="year-2024">2024</label>
                             </div>
                         </div>
                     </div>
@@ -112,7 +132,6 @@
                             </div>
                         </div>
                     </div>
-
                     <button id="new-submit" type="button">Submit</button>
                     <button id="add-button" type="button">Add Playlist</button>
                 </form>

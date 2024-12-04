@@ -35,7 +35,9 @@
     border-radius: 10px;
 }
 
-#premade-wrapper .genre-details {
+.track-list-list {
     background-color: #ff6f61;
-    border-radius: 25px;
+    border-radius: 20px;
+    height: 30vh;
+    width: 15vw;
 }

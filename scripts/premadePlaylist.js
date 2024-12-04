@@ -44,6 +44,7 @@ async function loadPlaylists() {
                     albumDiv.style.height = "150px";
                     return;
                 }
+
                 const genreDetails = document.createElement("div");
                 genreDetails.classList.add("genre-details");
                 const trackList = document.createElement("ol");
@@ -75,6 +76,7 @@ async function loadPlaylists() {
                 const existingPlaylists = JSON.parse(localStorage.getItem("playlists")) || [];
                 existingPlaylists.push(playlistData);
                 localStorage.setItem(playlistKey, JSON.stringify(existingPlaylists));
+                alert(`Succesfully Added: ${playlistKey}`);
             });
         }
     } catch (error) {

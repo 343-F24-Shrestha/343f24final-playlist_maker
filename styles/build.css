@@ -78,8 +78,13 @@
     border: 1px solid #ddd;
 }
 
+.build-form button {
+    margin-left: 25px;
+}
+
 .radio-section {
     margin-bottom: 10px;
+    margin-left: 25px;
 }
 
 .radio-section .radio-options {
