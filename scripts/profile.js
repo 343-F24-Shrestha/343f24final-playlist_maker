@@ -4,6 +4,7 @@ window.addEventListener('load', () => {
     const numPlaylists = document.getElementById("num_playlists") // The text for the number of playlists
     const playlistDisplay = document.getElementById("playlist_UL")
     const userDisplay = document.getElementById("username")
+    let numPlaylistsNum = 0;
     numPlaylists.textContent = localStorage.length - 2
     for (let i = 0; i < localStorage.length; i++) {
         if (localStorage.key(i).includes("playlist_")) {
@@ -23,6 +24,8 @@ window.addEventListener('load', () => {
                         playlist.append(deleteButton);
                         playlistDisplay.appendChild(playlist);
                 }
+                numPlaylistsNum++;
         }
 }
+numPlaylists.textContent = numPlaylistsNum;
 });
