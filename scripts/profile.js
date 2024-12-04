@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
         userDisplay.textContent = username;
     });
     for (let i = 0; i < localStorage.length; i++) {
-        if (localStorage.key(i) != "spotify_access_token") {
+        if (localStorage.key(i).includes("playlist_")) {
                 if(localStorage.key(i) != "debug") {
                         const playlist = document.createElement("li");
                         const deleteButton = document.createElement("button");
