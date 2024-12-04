@@ -44,7 +44,7 @@ document.getElementById("add-button").addEventListener("click", addPlaylist);
 // Searches for the tracks based on the user input parameters
 async function searchTracks(year, genre, popularity) {
     const apiUrl = 'https://api.spotify.com/v1/search';
-    const query = `year:${year} genre:${genre}`;
+    const query = `year:${year} genre:${genre} popularity:${popularity}`;
 
     try {
         const token = await getToken();
