@@ -13,6 +13,7 @@ window.addEventListener('load', () => {
         if (localStorage.key(i).includes("playlist_")) {
                 if(localStorage.key(i) != "debug") {
                         const playlist = document.createElement("li");
+                        playlist.style.color = "white";
                         const deleteButton = document.createElement("button");
                         deleteButton.innerText = "Remove";
                         deleteButton.addEventListener("click", async () => {
