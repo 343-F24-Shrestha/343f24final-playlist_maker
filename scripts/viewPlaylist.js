@@ -25,10 +25,10 @@ exportButton.addEventListener("click", () => {
         document.body.removeChild(tempLink);
 });
 
+localStorage.setItem("ggege", JSON.stringify("bleep"));
 // Iterates through the localStorage to search for non-token playlists
 for (let i = 0; i < localStorage.length; i++) {
-        if (localStorage.key(i) != "access_token" || localStorage.key(i).includes("playlist_")) {
-                console.log(localStorage.key(i).includes("playlist_"));
+        if (localStorage.key(i).includes("playlist_")) {
                 if (localStorage.key(i) != "debug") {
                         const playlist = document.createElement("li");
                         const deleteButton = document.createElement("button");
