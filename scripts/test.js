@@ -41,3 +41,32 @@ function authorizeSpotify() {
     )}`;
     window.location.href = authUrl;
 }
+
+async function getUserName() {
+    const token = getAccessTokenFromUrl();
+    handleSpotifyAuth()
+    console.log(localStorage.getItem("spotify_access_token"))
+        try {
+            // Call Spotify API to get the user profile
+            const response = await fetch('https://api.spotify.com/v1/me', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+    
+            if (!response.ok) {
+                console.error(`Error fetching Spotify profile: ${response.status} - ${response.statusText}`);
+                return null;
+            }
+    
+            const data = await response.json();
+            console.log(data);
+            // Extract and return the display name
+            return data.display_name || "Unknown User";
+        } catch (error) {
+            console.error("An error occurred while fetching the Spotify username:", error);
+            return null;
+        }
+    
+}

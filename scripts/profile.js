@@ -3,7 +3,12 @@
 window.addEventListener('load', () => {
     const numPlaylists = document.getElementById("num_playlists") // The text for the number of playlists
     const playlistDisplay = document.getElementById("playlist_UL")
+    const userDisplay = document.getElementById("username")
     numPlaylists.textContent = localStorage.length - 1
+    getUserName().then(username => {
+        console.log(username)
+        userDisplay.textContent = username;
+    });
     for (let i = 0; i < localStorage.length; i++) {
         if (localStorage.key(i) != "access_token") {
                 if(localStorage.key(i) != "debug") {
