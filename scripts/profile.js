@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
     const numPlaylists = document.getElementById("num_playlists") // The text for the number of playlists
     const playlistDisplay = document.getElementById("playlist_UL")
     const userDisplay = document.getElementById("username")
-    numPlaylists.textContent = localStorage.length - 1
+    numPlaylists.textContent = localStorage.length - 2
     for (let i = 0; i < localStorage.length; i++) {
         if (localStorage.key(i).includes("playlist_")) {
                 if(localStorage.key(i) != "debug") {
