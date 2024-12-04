@@ -43,15 +43,14 @@ function authorizeSpotify() {
 }
 
 async function getUserName() {
-    const token = getAccessTokenFromUrl();
     handleSpotifyAuth()
-    console.log(localStorage.getItem("spotify_access_token"))
+    const auth = localStorage.getItem("spotify_access_token");
         try {
             // Call Spotify API to get the user profile
             const response = await fetch('https://api.spotify.com/v1/me', {
                 method: 'GET',
                 headers: {
-                    'Authorization': `Bearer ${token}`
+                    'Authorization': `Bearer ${auth}`
                 }
             });
     
