@@ -25,7 +25,7 @@ function handleSpotifyAuth() {
 // Authorizes access to Spotify APi with clientID and the redirect URI
 function authorizeSpotify() {
     const clientId = "61e27c75288442e492a4585b195b1750";
-    const redirectUri = "http://127.0.0.1:5500/profile.html";
+    const redirectUri = "https://343-f24-shrestha.github.io/343f24final-playlist_maker/profile.html";
     // Defines the scopes for access to the Spotify API
     const scopes = [
         "user-read-private",
