@@ -45,12 +45,13 @@ nav {
 
 .nav-list a {
     text-decoration: none;
+    border-bottom: none;
     color: #e7eed0;
     font-family: "Archivo Black", serif;
     font-size: 25px;
     color:#51425f;
     border: none;
-    transition: color 0.5s;
+    transition: color 0.5s ease, padding-bottom 0.5s ease;
 }
 
 .nav-list a:hover {
@@ -97,17 +98,33 @@ main {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    height: 35vw;
+    height: 25vw;
     width: 25vw;
 }
 
-.album-cover img {
-    width: 200px;
-    height: 200px;
+.main-img {
+    border-radius: 25px;
+    width: 15vw;
+    height: 35vh;
 }
 
 .album-info {
     margin-top: 20px;
+}
+
+.main-link a {
+    color: white;
+    border-bottom: none;
+    text-decoration: none;
+    border-bottom: solid white 2px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    transition: color 0.5s ease, padding-bottom 0.5s ease;
+}
+
+.main-link a:hover {
+    color: #51425f;
+    padding-bottom: 0;
 }
 
 .profile-sec {
@@ -121,7 +138,7 @@ main {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    height: 35vw;
+    height: 25vw;
     width: 25vw;
 }
 
@@ -136,9 +153,8 @@ main {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    height: 35vw;
+    height: 25vw;
     width: 25vw;
-
 }
 
 a  {

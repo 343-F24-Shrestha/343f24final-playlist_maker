@@ -68,6 +68,7 @@ body{
     align-items: flex-start; /* Align content to the left side */
     padding-left: 20px; /* Optional padding */
     padding-top: 20px; /* Optional padding */
+    
 }
 
 .playlists-info-italic {
@@ -82,6 +83,7 @@ body{
 .back-button {
     right: 30vw;
 }
+
 .left_allign {
     display: flex;
     align-items: flex-start;

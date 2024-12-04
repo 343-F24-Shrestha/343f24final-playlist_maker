@@ -65,7 +65,7 @@ async function loadPlaylists() {
 
             // Event listener to add the country playlist to the users localStorage
             addButton.addEventListener("click", () => {
-                const playlistKey = `playlist_${country}`;
+                const playlistKey = `Top Tracks in ${country}`;
                 const playlistData = {
                     name: `Top Tracks in ${country}`,
                     tracks: tracks.map(track => ({
@@ -76,10 +76,11 @@ async function loadPlaylists() {
                 const existingPlaylists = JSON.parse(localStorage.getItem("playlists")) || [];
                 existingPlaylists.push(playlistData);
                 localStorage.setItem(playlistKey, JSON.stringify(existingPlaylists));
-                alert(`Succesfully Added: ${playlistKey}`);
+                alert(`Succesfully Added: Top Tracks in ${country}`);
             });
         }
     } catch (error) {
+        console.error(`Error raised by premade playlists: ${error}`);
     }
 }
 

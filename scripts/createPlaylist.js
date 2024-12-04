@@ -21,6 +21,7 @@ function getSelectedRadioValue(name) {
     return null;
 }
 
+// Gets a Spotify API token with a POST
 async function getToken() {
     const clientId = "61e27c75288442e492a4585b195b1750";
     const clientSecret = "6749ffe7281b4a85b84bc23b2341cad7";
@@ -65,6 +66,7 @@ async function searchTracks(year, genre, popularity) {
             return tracks;
         }
     } catch (error) {
+        console.error(`Error raised by playlist creation: ${error}`);
     }
 }
 
@@ -75,7 +77,6 @@ async function getTracks() {
     const year = getSelectedRadioValue("year");
     const genre = getSelectedRadioValue("genre");
     const popularity = getSelectedRadioValue("popularity");
-    const titleInput = document.getElementById("title-input1").value;
     const songContainer = document.getElementById("song-container");
     songContainer.innerHTML = "";
     let tracks = await searchTracks(year, genre, popularity);
@@ -90,6 +91,7 @@ async function getTracks() {
     }
 }
 
+// Helper function to add the playlist to localStorage if tracks were retrieved
 async function addPlaylist() {
     const titleInput = document.getElementById("title-input1").value;
     if (madeTracks) {

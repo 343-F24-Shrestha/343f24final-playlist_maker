@@ -53,3 +53,19 @@
 .delete:hover {
     background-color: #948e99;
 }
+
+.rename {
+    background-color: #2e1437;
+    width: 5vw;
+    height: 25px;
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+}
+
+.rename:hover {
+    background-color: #948e99;
+}
