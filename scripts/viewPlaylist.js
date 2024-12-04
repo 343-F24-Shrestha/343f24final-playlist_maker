@@ -1,4 +1,29 @@
 const playlistDisplay = document.getElementById("playlist-list");
+const exportButton = document.getElementById("exportButton");
+
+// Iterates through all the playlists stored in localStorage
+exportButton.addEventListener("click", () => {
+        const playlists = {};
+        for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key !== "access_token" && key !== "debug") {
+                        playlists[key] = JSON.parse(localStorage.getItem(key) || "null");
+                }
+        }
+        // Creates a new Blob containg all JSON-ified playlist informatio
+        const exportBlob = new Blob([JSON.stringify(playlists, null, 2)], {
+                type: "application/json",
+        });
+        // Creates an temporary object url/link to the new json file
+        const url = URL.createObjectURL(exportBlob);
+        const tempLink = document.createElement("a");
+        tempLink.href = url;
+        tempLink.download = "playlists.json";
+        // Appends the temporary link to the body of the document and autoclicks it to download the file
+        document.body.appendChild(tempLink);
+        tempLink.click();
+        document.body.removeChild(tempLink);
+});
 
 // Iterates through the localStorage to search for non-token playlists
 for (let i = 0; i < localStorage.length; i++) {

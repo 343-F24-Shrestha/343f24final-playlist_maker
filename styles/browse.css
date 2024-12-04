@@ -36,8 +36,10 @@
 }
 
 .track-list-list {
-    background-color: #ff6f61;
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
-    height: 30vh;
+    font-size: 15px;
+    height: 90%;
+    padding-top: 15px;
     width: 15vw;
 }

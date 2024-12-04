@@ -4,9 +4,8 @@
     background-color: #fff;
     border: 2px solid #ddd;
     margin: 20px auto;
-    width: 90%;
     padding: 20px;
-    max-width: 900px;
+    max-width: 70vw;
     border-radius: 8px;
     font-size: 19px;
 }
@@ -14,26 +13,32 @@
 #playlist-control {
     display: flex;
     flex-grow: 1;
-    justify-content: space-between;
-
+    justify-content: space-evenly;
 }
+
 
 #playlist-control * {
     border-radius: 5px;
     background-color: #948e99;
-    color: #000000;
+    color: white;
     padding: 12px;
     text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+#playlist-control a:hover {
+    color: #2e1437;
 }
 
 #playlist-wrapper #playlist-container {
     border: 2px solid #ddd;
-    width: 40vw;
+    width: 65vw;
     border-radius: 8px;
     padding: 25px;
     flex-grow: 1;
     background: #ffffff;
-    max-height: 80vh; 
+    max-height: 150vh; 
+    min-height: 40vh;
     overflow-y: auto;
 }
 
