@@ -49,6 +49,17 @@
     font-weight: 400;
     word-wrap: break-word;
 }
+
+.playlist_UL {
+    left: 300px;
+    top: 300px;
+    position: absolute;
+    font-size: 25px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
 .playlists-info-italic {
     font-style: italic;
 }

@@ -28,21 +28,15 @@
             <div class="profile-text">Profile</div>
             <div class="username">Username</div>
             <div class="playlists-info">
-                <span>You have </span><span class="playlists-info-italic">n</span><span> number of playlists</span>
+                <span>You have </span><span class="playlists-info-italic" id="num_playlists">n</span><span> playlist(s)</span>
             </div>
+            <ul class="playlist_UL" id="playlist_UL">
+                <!--JS will retrieve a user's currently saved list of playlists-->
+            </ul>
         </div>
     </div>
 
-    <div id="playlist-container">
-        <ul>
-            <!--JS will retrieve a user's currently saved list of playlists-->
-            <li>placeholder</li>
-            <li>placeholder</li>
-            <li>placeholder</li>
-            <li>placeholder</li>
-            <li>placeholder</li>
-        </ul>
-    </div>
     <script src="scripts/scripst.js"></script>
+    <script src="scripts/profile.js"></script>
 </body>
 </html>
