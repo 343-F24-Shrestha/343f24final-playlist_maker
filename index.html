@@ -1,57 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playlist App</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Playlist App</title>
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    </head>
 
-<body>
+    <body>
 
-    <nav>
-        <ul class="nav-list">
-            <li><a href="index.html"><strong>Home</strong></a></li>
-            <li><a href="playlists.html"><strong>Playlists</strong></a></li>
-            <li class="search-bar">
-                <a href="browse.html">Browse</a>
-            </li>
-            <li class="profile"><a href="profile.html"><strong>Profile</strong></a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html"><strong>Home</strong></a></li>
+                <li><a href="playlists.html"><strong>Playlists</strong></a></li>
+                <li class="search-bar">
+                    <a href="browse.html">Browse</a>
+                </li>
+                <li class="profile"><a
+                        href="profile.html"><strong>Profile</strong></a></li>
+            </ul>
+        </nav>
+        <main>
+                <!-- Section for new playlist button/display on the main page -->
+                <section class="playlist-section">
+                    <div class="playlist-info">
+                        <div class="cover-art">
+                            <img class="main-img"
+                                src="assets/playlistbuild.jpeg"
+                                alt="Album Cover">
+                        </div>
+                        <h2 class="main-link"><strong><a
+                                    href="build-playlist.html">New
+                                    Playlist</a></strong></h2>
+                    </div>
+                </section>
+                <!-- Section for the view profile button/display on the main page -->
+                <section class="profile-sec">
+                    <div class="profile-div">
+                        <div class="songs-art">
+                            <img class="main-img" src="assets/profile.jpeg"
+                                alt="Default profile">
+                        </div>
+                        <h2 class="main-link"><strong><a
+                                    href="profile.html">View
+                                    Profile</a></strong></h2>
+                    </div>
+                </section>
+                <!-- Section for the view playlist button/display on the main page -->
+                <section class="playlist-view">
+                    <div class="playlist-v">
+                        <img class="main-img" src="assets/viewplaylist.jpeg"
+                            alt="View Playlists">
+                        <h2 class="main-link"><a href="playlists.html">View
+                                Playlists</a></h2>
+                    </div>
+                </section>
+                <h1 class="main-header">Get Started Making Playlists</h1>
+        </main>
 
-    <main>
-        <!-- Section for new playlist button/display on the main page -->
-        <section class="playlist-section">
-            <div class="playlist-info">
-                <div class="cover-art">
-                    <img class="main-img" src="assets/playlistbuild.jpeg" alt="Album Cover">
-                </div>
-                <h2 class="main-link"><strong><a href="build-playlist.html">New Playlist</a></strong></h2>
-            </div>
-        </section>
-        <!-- Section for the view profile button/display on the main page -->
-        <section class="profile-sec">
-            <div class="profile-div">
-                <div class="songs-art">
-                    <img class="main-img" src="assets/profile.jpeg" alt="Default profile">
-                </div>
-                <h2 class="main-link"><strong><a href="profile.html">View Profile</a></strong></h2>
-            </div>
-        </section>
-        <!-- Section for the view playlist button/display on the main page -->
-        <section class="playlist-view">
-            <div class="playlist-v">
-                <img class="main-img" src="assets/viewplaylist.jpeg" alt="View Playlists">
-                <h2 class="main-link"><a href="playlists.html">View Playlists</a></h2>
-            </div>
-        </section>
-
-    </main>
-
-</body>
+    </body>
 
 </html>

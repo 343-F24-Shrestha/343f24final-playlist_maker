@@ -6,7 +6,7 @@ exportButton.addEventListener("click", () => {
         const playlists = {};
         for (let i = 0; i < localStorage.length; i++) {
                 const key = localStorage.key(i);
-                if (key !== "access_token" && key !== "debug") {
+                if (key.includes("playlist_")) {
                         playlists[key] = JSON.parse(localStorage.getItem(key) || "null");
                 }
         }
@@ -27,7 +27,8 @@ exportButton.addEventListener("click", () => {
 
 // Iterates through the localStorage to search for non-token playlists
 for (let i = 0; i < localStorage.length; i++) {
-        if (localStorage.key(i) != "access_token") {
+        if (localStorage.key(i) != "access_token" || localStorage.key(i).includes("playlist_")) {
+                console.log(localStorage.key(i).includes("playlist_"));
                 if (localStorage.key(i) != "debug") {
                         const playlist = document.createElement("li");
                         const deleteButton = document.createElement("button");
@@ -52,7 +53,7 @@ for (let i = 0; i < localStorage.length; i++) {
                                 if (input != null) {
                                         let playlist = localStorage.getItem(currentKey);
                                         localStorage.removeItem(currentKey);
-                                        localStorage.setItem(input, playlist);
+                                        localStorage.setItem(`playlist_${input}`, playlist);
                                         playlist.textContent = input;
                                         location.reload();
                                 }

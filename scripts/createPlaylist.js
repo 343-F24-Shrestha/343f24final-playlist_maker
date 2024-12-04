@@ -96,10 +96,10 @@ async function addPlaylist() {
     const titleInput = document.getElementById("title-input1").value;
     if (madeTracks) {
         if (titleInput == "") {
-            localStorage.setItem("Untitled", JSON.stringify(madeTracks));
+            localStorage.setItem("playlist_untitled", JSON.stringify(madeTracks));
             alert("Added New Playlist: Untitled");
         } else {
-            localStorage.setItem(titleInput, JSON.stringify(madeTracks));
+            localStorage.setItem(`playlist_${titleInput}`, JSON.stringify(madeTracks));
             alert(`Added New Playlist: ${titleInput}`);
         }
     }

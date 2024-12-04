@@ -52,6 +52,10 @@
     overflow-y: auto;
 }
 
+.main-header {
+    color: #2e1437;
+}
+
 
 .delete {
     background-color: red;

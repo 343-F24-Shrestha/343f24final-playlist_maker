@@ -17,7 +17,8 @@ async function loadPlaylists() {
             // Lines of creating various html elements to eventually add to the page
             const albumDiv = document.createElement("div");
             albumDiv.classList.add("premade-playlist");
-            const countryInfo = document.createElement("h3");
+            const countryInfo = document.createElement("h2");
+            countryInfo.style.fontSize = "1.1em";
             const expandButton = document.createElement("button");
             expandButton.classList.add("expand");
             expandButton.type = "button";
@@ -88,7 +89,7 @@ async function loadPlaylists() {
                 };
                 const existingPlaylists = JSON.parse(localStorage.getItem("playlists")) || [];
                 existingPlaylists.push(playlistData);
-                localStorage.setItem(playlistKey, JSON.stringify(existingPlaylists));
+                localStorage.setItem(`playlist_${country}`, JSON.stringify(existingPlaylists));
                 alert(`Succesfully Added: Top Tracks in ${country}`);
             });
         }

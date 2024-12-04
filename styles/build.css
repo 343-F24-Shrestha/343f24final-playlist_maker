@@ -32,6 +32,10 @@
     margin-bottom: 20px;
 }
 
+.main-header {
+    color: #2e1437;
+}
+
 #build-wrapper #song-container {
     border: 2px solid #ddd;
     width: 80vw;
