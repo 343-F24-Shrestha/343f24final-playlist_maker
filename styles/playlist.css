@@ -5,9 +5,10 @@
     border: 2px solid #ddd;
     margin: 20px auto;
     padding: 20px;
-    max-width: 70vw;
+    width: auto;
+    max-width: 80vw;
     border-radius: 8px;
-    font-size: 19px;
+    font-size: 1em;
 }
 
 #playlist-control {
@@ -21,10 +22,19 @@
     border-radius: 5px;
     background-color: #948e99;
     color: white;
-    padding: 12px;
+    padding: 1rem;
     text-decoration: none;
     transition: color 0.5s ease;
 }
+
+@media screen and (max-width: 700px) {
+    #playlist-control * {
+        font-size: 0.8em;
+        width: auto;
+        height: auto;
+    }
+}
+
 
 #playlist-control a:hover {
     color: #2e1437;
@@ -32,7 +42,7 @@
 
 #playlist-wrapper #playlist-container {
     border: 2px solid #ddd;
-    width: 65vw;
+    width: auto;
     border-radius: 8px;
     padding: 25px;
     flex-grow: 1;
@@ -45,7 +55,7 @@
 
 .delete {
     background-color: red;
-    width: 5vw;
+    width: auto;
     height: 25px;
     margin: 5px;
     padding: 5px;
@@ -61,8 +71,8 @@
 
 .rename {
     background-color: #2e1437;
-    width: 5vw;
-    height: 25px;
+    width: auto;
+    height: 5vh;
     margin: 5px;
     padding: 5px;
     border: none;

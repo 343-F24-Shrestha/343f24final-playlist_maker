@@ -6,7 +6,6 @@
     flex-wrap: wrap;
     gap: 20px;
     margin: 20px auto;
-    max-width: 1200px;
 }
 
 #premade-wrapper .premade-playlist {
@@ -26,6 +25,18 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    #premade-wrapper {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    #premade-wrapper .premade-playlist {
+        width: 90%;
+        max-width: none;
+    }
 }
 
 #premade-wrapper .premade-playlist img {
